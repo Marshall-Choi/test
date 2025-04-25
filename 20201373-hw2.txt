@@ -1,0 +1,109 @@
+Problem 0. Warm-up: Find the CTF Webpage
+The URL of the CTF homepage is hidden somewhere inside our course webpage.
+(a) What is the URL of our CTF homepage?
+  http://10.20.12.187:4000/
+(b) Describe how you discovered this URL.
+  The URL can be obtained by checking the HTML file of our course website by viewing page source, and the URL is hidden there.
+
+⸻
+
+Problem 1. Login (10 points)
+In this challenge, you should sign in to the web service as admin without knowing the password. Once you successfully sign in to the service, you will find the flag.
+(a) (2 points) Describe the SQL query used in this web service.
+    
+(b) (2 points) Describe the vulnerability in this web service.
+(c) (5 points) Explain in detail how you can exploit this vulnerability to get the flag.
+(d) What is the flag?
+    flag{2646ff5166d1b4602eaec51b906782db}
+
+⸻
+
+Problem 2. Password (15 points)
+In the same web service used in Problem 1, you now need to find out the password of admin, which is the flag of this challenge.
+(a) (13 points) Explain in detail how you can exploit this vulnerability to get the flag (i.e., admin’s password).
+    blind SQL injection
+    admin' AND substr((SELECT password FROM user WHERE username='admin'),2,1)='f' --
+(b) (2 points) What is the flag?
+    flag{63d6566155a4e75f920cf4e184cc8a68}
+
+⸻
+
+Problem 3. Password++ (25 points)
+As in the previous challenge, your goal is to find out the password of admin, which is the flag of this challenge.
+(a) (3 points) Guess the SQL query used in this web service.
+(b) What is the HTTP method of the request sent by the browser when you click the “Signin” button?
+(c) (1 point) What is the body content of the HTTP request sent by the browser when you click the “Signin” button?
+(d) (5 points) Describe the vulnerability in this web service.
+(e) (10 points) Explain how you can exploit this vulnerability to get the flag (i.e., admin’s password). Include the script (e.g., python3 script) to exploit it.
+(f) (5 points) What is the flag?
+    flag{4800654a13dd3da01e26e32a65e5abd0}
+
+⸻
+
+Problem 4. Check Duplicate (35 points)
+In this challenge, your goal is the same as in the previous challenge. However, unlike in the previous web services, this web service manages admin’s account information in a separate table. That is, admin does not exist in the user table (hint: Our server uses SQLite database system).
+(a) (4 points) Guess the SQL query used in this web service.
+(b) (2 points) Describe the vulnerability in this web service.
+(c) (12 points) What is the name of the table used for managing the admin’s account? Explain in detail how you found it.
+(d) (12 points) Explain in detail how you can exploit this vulnerability to get the flag.
+(e) (5 points) What is the flag?
+    flag{e11b79ca59cebf88aee1dc5c4c0e31d0}
+
+⸻
+
+Problem 5. Get Color (10 points)
+In this challenge, you need to read the contents of the file /var/www/flag.txt.
+(a) (3 points) Describe the vulnerability in this web service.
+(b) (6 points) Explain in detail how you can exploit this vulnerability to get the flag.
+(c) What is the flag?
+    flag{4838ca10e659bcf161c3b800ba71e08c}
+
+⸻
+
+Problem 6. Uploader (15 points)
+In this challenge, you have to upload an arbitrary PHP file that reads the /var/www/flag.txt file via a shell command.
+(a) (6 points) Describe in pseudocode what content-filtering checks are implemented on the server for uploaded files.
+(b) (6 points) Explain how you can exploit this vulnerability to get the flag.
+(c) (3 points) What is the flag?
+
+⸻
+
+Problem 7. Uploader++ (25 points)
+This challenge has more advanced content-filtering checks than the previous challenge. You have to upload an arbitrary PHP file that reads the /var/www/flag.txt file via a shell command.
+(a) (10 points) Describe in pseudocode what content-filtering checks are implemented on the server for uploaded files.
+(b) (10 points) Explain how you can exploit this vulnerability to get the flag.
+(c) (5 points) What is the flag?
+
+⸻
+
+Problem 8. Search V1 (10 points)
+In this challenge, you need to read the victim’s cookie!
+(a) (2 points) Describe the vulnerability in this web service. You need to specify which type of XSS this vulnerability is.
+(b) (7 points) Explain how you can exploit this vulnerability to get the flag.
+(c) What is the flag?
+
+⸻
+
+Problem 9. Search V2 (20 points)
+In this challenge, Search V1 has been more safe. You need to read the victim’s cookie!
+(a) (5 points) Compared to Problem 8, what defense mechanism has been added? Describe the added defense logic in detail.
+(b) (8 points) Describe how you can bypass the deployed defense mechanism.
+(c) (4 points) Explain how you can exploit this vulnerability to get the flag.
+(d) (3 points) What is the flag?
+
+⸻
+
+Problem 10. Service Center (25 points)
+In this challenge, you need to read the victim’s cookie!
+(a) (10 points) Describe the vulnerability in this web service. You need to specify which type of XSS this vulnerability is.
+(b) (11 points) Explain how you can exploit this vulnerability to get the flag.
+(c) (4 points) What is the flag?
+
+⸻
+
+Problem 11. Search V3 (30 points)
+In this challenge, Search V2 has been more safe. You need to read the victim’s cookie!
+(a) (5 points) Describe the vulnerability in this web service. You need to specify which type of XSS this vulnerability is.
+(b) (10 points) Explain the deployed defense logic to prevent vulnerabilities.
+(c) (10 points) Explain how you can exploit this vulnerability to get the flag.
+(d) (5 points) What is the flag?
