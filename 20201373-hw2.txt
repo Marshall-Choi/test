@@ -65,6 +65,7 @@ In this challenge, you have to upload an arbitrary PHP file that reads the /var/
 (a) (6 points) Describe in pseudocode what content-filtering checks are implemented on the server for uploaded files.
 (b) (6 points) Explain how you can exploit this vulnerability to get the flag.
 (c) (3 points) What is the flag?
+    flag{cf68b6c56c14ece6c68ad752e4c2352d}
 
 ⸻
 
